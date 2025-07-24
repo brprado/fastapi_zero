@@ -15,3 +15,16 @@ def test_root_deve_retornar_ola_mundo():
     # Assert (Garanta que X é X, valor esperado = valor atual)
     assert response.json() == {'message': 'Olá, mundo!'}
     assert response.status_code == HTTPStatus.OK
+
+
+def test_endpoint_hello_world():
+    # Arrange
+    client = TestClient(app)
+
+    # Act / Setup
+    response = client.get('/hello-world')
+
+    # Assert
+    assert '<h1>Olá, mundo!</h1>' in response.text
+    assert response.headers['content-type'] == 'text/html; charset=utf-8'
+    assert response.status_code == HTTPStatus.OK
