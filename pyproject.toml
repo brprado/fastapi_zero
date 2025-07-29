@@ -17,7 +17,8 @@ dependencies = [
     "sqlalchemy[asyncio] (>=2.0.41,<3.0.0)",
     "psycopg[binary] (>=3.2.9,<4.0.0)",
     "tzdata (>=2025.2,<2026.0)",
-    "pydantic[email] (>=2.11.7,<3.0.0)"
+    "pydantic[email] (>=2.11.7,<3.0.0)",
+    "greenlet (>=3.2.3,<4.0.0)"
 ]
 
 
